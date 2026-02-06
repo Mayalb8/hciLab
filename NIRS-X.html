@@ -182,68 +182,55 @@
                     </p>
                     <p><em>Screenshot of the first few lines of the CSV from one subject's data:</em> <img alt="slide window data"
                             data-src="/code_and_datasets/NIRS-X/non_bpf_silde_window_data.png" loading="lazy" class="image fit"
-                            src="images/code_and_datasets_images/fNIRS2MW/non_bpf_silde_window_data.png"></p>
+                            src="images/code_and_datasets_images/fNIRS2MW/non_bpf_silde_window_data.png">
+                            Each row of the CSV file represents the fNIRS sensor measurements at one timestep.
+                    </p>
+                    <p>There are 2 columns used as <em>keys and labels</em>:</p>
+                    <ul>
+                        <li><code style="background-color: rgb(210, 201, 201);">chunk</code> : indicating the index of the window (the window index increments by one as time goes on)
+                        </li>
+                        <li><code style="background-color: rgb(210, 201, 201);">label</code> : indicating if the intensity level, either 0/1/2/3</li>
+                    </ul>
+                    <p>All rows with the same <code style="background-color: rgb(210, 201, 201);">chunk</code> id represent the time series for a specific individual window. This window
+                        of measurements is the input to our classifier. <br>
+                        There are 8 measurement columns, which we use as <em>features</em> for machine learning classifiers:
+                        <ul>
+                            <li>AB_I_O, AB_PHI_O, AB_I_DO, AB_PHI_DO</li>
+                            <li>CD_I_O, CD_PHI_O, CD_I_DO, CD_PHI_DO</li>
+                        </ul>
+                    </p>
+                    <p>Each column is a separate measurement of a hemoglobin concentration in the blood moving through the user's brain.
+                        Measuring the changes in these blood oxygen concentrations over time can be a useful proxy of mental workload
+                        intensity. The units of each measurement are μmol/L (micromoles per liter).
+                    </p>
+                    <p>The feature names here indicate:</p>
+                    <ul>
+                        <li>which sensor location on the forehead was used (AB or CD)</li>
+                        <li>which optical measurement type was used (I = intensity, PHI= phase)</li>
+                        <li>which blood oxygen concentration was being measured (O = oxygenated hemoglobin; DO = deoxygenated hemoglobin)
+                        </li>
+                    </ul>
+                    <p>Note: Our box.com data release also offer other window sizes (2, 5, 10, 20, 30, and 40 seconds) if desired. We
+                        focused on the 30-second windows, which we identified as preferred.</p>
+                    
+
                     
                 </Section>
-
                 <!----------------------------------------Publications Section------------------------------------------------------>
                 <Section id="three" class="wrapper">
                     <h2>Publications</h2>
                     <hr class="custom-line">
-                    <p>The paper describing our dataset and benchmarks can be found here:</p>
+                    <p>The paper describing our latest dataset and algorithms can be found here:</p>
                     <blockquote>
-                        <p><a style="color: #4a90da;" href="https://openreview.net/pdf?id=QzNHE7QHhut">The Tufts fNIRS
-                                Mental Workload Dataset
-                                &amp; Benchmark for
-                                Brain-Computer Interfaces that Generalize</a> <br>
-                            Zhe Huang, Liang Wang, Giles Blaney, Christopher Slaughter, Devon McKeon, Ziyu Zhou, Robert
-                            Jacob, and <a style="color: #4a90da;" href="https:www.michaelchughes.com">Michael C.
-                                Hughes</a> <br>
-                            To appear in the Proceedings of <i><a style="color: #4a90da;" href="">Neural Information
-                                    Processing Systems (NeurIPS
-                                    2021) Track on
-                                    Datasets and Benchmarks </a></i>, 2021
+                        <p><a href="https://dl.acm.org/doi/pdf/10.1145/3654777.3676429">Empower Real-World BCIs with NIRS-X: An Adaptive
+                                Learning Framework that Harnesses Unlabeled Brain Signals</a> <br>
+                            Wang, Liang and Zhang, Jiayan and Liu, Jinyang and McKeon, Devon and Brizan, David Guy and Blaney, Giles and
+                            Jacob, Robert JK <br>
+                            To appear in the Proceedings of the 37th Annual ACM Symposium on User Interface Software and Technology, 2024
                         </p>
                     </blockquote>
-
-                    <p>Lead authors ZH &amp; LW contributed equally, as did supervisory authors RJ &amp; MCH.</p>
-                    <p>We are pleased to report that the paper describing our dataset and benchmarks was recently
-                        accepted for publication
-                        at the new <a href="">Track on Datasets and Benchmarks happening at NeurIPS 2021</a>. NeurIPS is
-                        a top-tier
-                        conference for machine learning research.</p>
-                    <p>Please cite our papers if you find these datasets (fNIRS2MW-Visual and fNIRS2MW-Audio) useful:
-                    </p>
-                    <blockquote>
-                        <p>Wang, L., Huang, Z., Zhou, Z., McKeon, D., Blaney, G., Hughes, M. C., & Jacob, R. J. K.
-                            (2021).
-                            <i>Taming fNIRS-based
-                                BCI input for better calibration and broader use.</i> In <i>The 34th Annual ACM
-                                Symposium on
-                                User Interface
-                                Software and Technology</i> (pp. 179-197).
-                        </p>
-
-                        <p>Huang, Z., Wang, L., Blaney, G., Slaughter, C., McKeon, D., Zhou, Z., Jacob, R. J. K., &
-                            Hughes,
-                            M. C. (2021). <i>The
-                                Tufts fNIRS Mental Workload Dataset & Benchmark for Brain-Computer Interfaces that
-                                Generalize.</i> In
-                            <i>Proceedings of the Neural Information Processing Systems (NeurIPS) Track on Datasets and
-                                Benchmarks</i>.
-                            https://openreview.net/pdf?id=QzNHE7QHhut
-                        </p>
-
-                        <p>Wang, L., Zhang, J., Liu, J., McKeon, D., Brizan, D. G., Blaney, G., & Jacob, R. J. K.
-                            (2024).
-                            <i>Empower real-world
-                                BCIs with NIRS-X: An adaptive learning framework that harnesses unlabeled brain
-                                signals.</i>
-                            In <i>Proceedings
-                                of the 37th Annual ACM Symposium on User Interface Software and Technology</i> (pp.
-                            1–16).
-                        </p>
-                    </blockquote>
+                    <p>Please cite our papers if you find these datasets (fNIRS2MW-Visual and fNIRS2MW-Audio) useful:</p>
+                            
                 </Section>
                 <!----------------------------------------Data Collection Procedures Section------------------------------------------------------>
                 <Section id="four" class="wrapper">
