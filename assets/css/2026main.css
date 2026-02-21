@@ -1,27 +1,27 @@
 @font-face {
   font-family: 'TheNextFont';
-  src: url('./fonts/TheNextFont.ttf') format('truetype');
+  src: url('../localFonts/TheNextFont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Satoshi';
-  src: url('./fonts/Satoshi-Regular.otf') format('opentype');
+  src: url('../localFonts/Satoshi-Regular.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Satoshi';
-  src: url('./fonts/Satoshi-Bold.otf') format('opentype');
+  src: url('../localFonts/Satoshi-Bold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Satoshi';
-  src: url('./fonts/Satoshi-BoldItalic.otf') format('opentype');
+  src: url('../localFonts/Satoshi-BoldItalic.otf') format('opentype');
   font-weight: 700;
   font-style: italic;
 }
