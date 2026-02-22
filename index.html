@@ -1,155 +1,108 @@
-<!DOCTYPE HTML>
-<!--
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>Human Computer Interaction Lab</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<noscript>
-		<link rel="stylesheet" href="assets/css/noscript.css" />
-	</noscript>
-	<style>
-		body,h1,h2,h3,h4,h5 {
-			color: white;
-			/* Sets the default text color to white for the entire body */
-
-		}
-	</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HCI Lab – Human Computer Interaction Lab</title>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script> -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/2026main.css" />
+  <!-- <style>
+    
+  </style> -->
 </head>
+<body>
 
-<body class="is-preload">
+<!-- TODO: 
+1) Replace icons
+2) Learn More animation/ reveal
+3) Replace logo to SVG and cover art to video
+    - SVG not showing
+4) Description text underneath 'current projects' -->
 
-	<!-- Sidebar -->
-	<section id="sidebar">
-		<div class="inner">
-			<nav>
-				<ul>
-					<li><a href="#intro">Home</a></li>
-					<li><a href="people.html">People</a></li>
-					<li><a href="research.html">Research</a></li>
-					<li><a href="publications.html">Publications</a></li>
-					<li><a href="contactUs.html">Get Involved</a></li>
-				</ul>
-			</nav>
-		</div>
-	</section>
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="hero">
+    <!-- Nav -->
+    <nav>
+        <div class="nav-logo">
+            <!-- <img src="./assets/logo/HCILogo_full.png" alt="HCI Lab Logo" style="height:38px; width:auto; filter: brightness(0) invert(1);" /> -->
+            <img src="./assets/logo/HCILogo_full.svg"
+            alt="HCI Lab Logo"
+            class="h-10 object-contain filter invert" />
+        </div>
+        <ul class="nav-links">
+            <li><a href="research.html">Research</a></li>
+            <li><a href="people.html">Members</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="contactUs.html">Contact</a></li>
+        </ul>
+    </nav>
 
-	<!-- Wrapper -->
-	<div id="wrapper">
+    <!-- Hero text -->
+    <div class="hero-content">
+        <h1>
+            Bridging minds and machines.<br>
+            <em>Enhancing human potential.</em>
+        </h1>
+        <div class="hero-buttons">
+            <button class="btn-outline">Current Research</button>
+            <button class="btn-filled">Meet the Team</button>
+        </div>
+    </div>
+</section>
 
-		<!-- Intro -->
-		<section id="intro" class="wrapper style1 fullscreen fade-up">
-			<div class="inner">
-				<h1>Human Computer Interaction Lab</h1>
-				<p>Bridging minds and machines to enhance human potential</p>
-			</div>
-		</section>
+<!-- ═══════════════ RESEARCH FOCUS ═══════════════ -->
+<section style="padding: 52px 24px 40px; max-width: 700px; margin: 0 auto; margin-top: 70px;">
+    <p class="section-label">Research Focus</p>
+    <h2 class="section-title">Advancing the Field of HCI</h2>
+    <p class="section-sub">Building a new generation of "implicit" brain-computer interfaces.</p>
 
-		<!-- One -->
-		<section id="one" class="wrapper style2 spotlights">
-			<section>
-				<a href="#" class="image"><img src="images/HCILab3.JPG" alt="" data-position="center center" /></a>
-				<div class="content">
-					<div class="inner">
-						<h2>Current Focus</h2>
-						<p> The current focus of our lab is on a new generation of "implicit" brain-computer
-							interfaces. Our work in real-time measurement and
-							machine learning classification of functional near
-							infrared spectroscopy (fNIRS) brain data allows to create, use, and study new kinds of
-							implicit user interfaces based on brain measurement.
-						</p>
-					</div>
-				</div>
-			</section>
-			<section>
-				<a href="#" class="image"><img src="images/MusicLearning.png" alt="" data-position="top center" /></a>
-				<div class="content">
-					<div class="inner">
-						<h2>Broader Focus</h2>
-						<p> We are now also broadening this work to include other forms of lightweight, passive,
-							real-time adaptive implicit interaction, based on physiological or other measurements. Our
-							focus continues to be on the design of subtle and effective implicit interfaces that make
-							judicious use of the measurements we can obtain..</p>
-					</div>
-				</div>
-			</section>
-		</section>
+    <div style="display:flex; gap:16px; margin-top:60px;">
+    <!-- Card 1 -->
+        <div class="card">
+            <div class="card-icon">
+            <!-- TODO: insert ICON <img> -->
+            </div>
+            <h3>Implicit Interaction</h3>
+            <p>Interfaces without explicit commands</p>
+            <a href="#" class="learn-more">Learn More</a>
+        </div>
 
-		<!-- Two -->
-		<section id="two" class="wrapper style3 fade-up">
-			<div class="inner">
-				<h2>Learn More</h2>
-				<div class="features">
-					<section>
-						<a href='codeDatasets.html'>
-							<span class="icon solid major fa-code"></span>
-							<h3>Code and Datasets</h3>
-							<p>View open source code or datasets developed by the lab</p>
-						</a>
-					</section>
-					<section>
-						<a href='people.html'>
-							<span class="icon solid major fa-users"></span>
-							<h3>People</h3>
-							<p>View a listing of lab members</p>
-						</a>
-					</section>
-					<section>
-						<a href='publications.html'>
-							<span class="icon solid major fa-file-alt"></span>
-							<h3>Publications</h3>
-							<p>View a list of publications from the lab</p>
-						</a>
-					</section>
-					<section>
-						<a href='research.html'>
-							<span class="icon solid major fa-desktop"></span>
-							<h3>Research</h3>
-							<p>Learn more about the research done in the HCI Lab</p>
-						</a>
-					</section>
-					<section>
-						<a href='contactUs.html'>
-							<span class="icon solid major fa-hands-helping"></span>
-							<h3>Get Involved</h3>
-							<p>Learn more about getting involved with the lab as a student, research assistant, or
-								collaborator</p>
-						</a>
-					</section>
-					<section>
+        <!-- Card 2 -->
+        <div class="card">
+            <div class="card-icon">
+            <!-- TODO: insert ICON <img> -->
+            </div>
+            <h3>Adaptive User Interfaces</h3>
+            <p>Interfaces that respond in real time</p>
+            <a href="#" class="learn-more">Learn More</a>
+        </div>
+    </div>
+</section>
 
-					</section>
-				</div>
-			</div>
-		</section>
+<!-- ═══════════════ FEATURED WORK ═══════════════ -->
+<section style="padding: 40px 24px 60px; max-width: 520px; margin: 0 auto;">
+    <p class="section-label">Featured Work</p>
+    <h2 class="section-title">Current Projects</h2>
+    <p class="section-sub">todo: what should I write here Maddie?</p>
 
-	</div>
+    <div style="margin-top: 70px;">
+        <div class="project-card">
+            <div class="project-img">
+            <div class="badge">Current</div>
+                <img src="./images/project_images/cabcs_study_images/IMG_8668.jpeg" alt="picture of man with a fmri and eeg recording device">
+            </div>
+            <div class="project-body">
+            <h4>Investigating Effects of Mental Workload Manipulation During Motion Using Multimodal Sensors</h4>
+            <a href="#" class="learn-more">Learn More</a>
+            </div>
+        </div>
+    </div>
+</section>
 
-	<!-- Footer -->
-	<footer id="footer" class="wrapper style1-alt">
-		<div class="inner">
-			<ul class="menu">
-				<li>&copy; Rob Jacob. All rights reserved.</li>
-				<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-			</ul>
-		</div>
-	</footer>
-
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
+<footer class="site-footer">
+  © Rob Jacob. All rights reserved.
+</footer>
 
 </body>
-
 </html>

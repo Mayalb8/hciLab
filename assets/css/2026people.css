@@ -1,0 +1,202 @@
+@font-face {
+    font-family: 'TheNextFont';
+    src: url('../localFonts/TheNextFont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('../localFonts/Satoshi-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('../localFonts/Satoshi-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('../localFonts/Satoshi-BoldItalic.otf') format('opentype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Satoshi-Regular';
+    color: #1a1a2e;
+}
+
+/* ── NAV ── */
+.nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 14px 24px;
+}
+
+.nav-links a {
+    color: #1a1a2e;
+    text-decoration: none;
+
+}
+
+.nav-links a:hover {
+    color: #3B6AD1;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-right: auto;
+    /* pushes nav-links to the right */
+    text-decoration: none;
+}
+
+.logo-box {
+    background: #3b8eea;
+    color: #fff;
+    font-weight: 900;
+    font-size: 0.75rem;
+    padding: 4px 6px;
+    line-height: 1.1;
+    letter-spacing: 0.04em;
+}
+
+.logo-text {
+    color: #1a1a2e;
+    font-size: 0.6rem;
+    font-weight: 400;
+    line-height: 1.3;
+    opacity: 0.85;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    font-family: 'TheNextFont';
+    margin-right: auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+    font-family: 'TheNextFont';
+
+}
+
+.site-footer {
+    background: #6ACAF6;
+    color: #fff;
+    text-align: center;
+    padding: 18px 20px;
+    font-family: 'Satoshi';
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+}
+
+
+.section-label {
+    font-family: Satoshi;
+    font-weight: 900;
+    font-style: Black;
+    color: #3B6AD1;
+    font-size: 30px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+}
+
+.section-title {
+    font-family: Satoshi;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 60px;
+    line-height: 1.15;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    margin-bottom: 100px;
+    color: #181818;
+}
+
+.section-sub {
+    font-family: Satoshi;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.2;
+    /* was 110px — that's why there's so much gap */
+    margin-top: 48px;
+    margin-bottom: 48px;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+    color: #6ACAF6;
+}
+
+/* ── CARDS ── */
+.card {
+    display: flex;
+    align-items: stretch;
+    /* make image fill full card height */
+    background: #fff;
+    border-radius: 8px;
+    padding: 0;
+    /* remove padding — let image touch the edge */
+    overflow: hidden;
+    /* clip the image to the card's border-radius */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin-top: 32px;
+}
+
+.card-icon {
+    width: 280px;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 0;
+    /* card handles the rounding, not the image */
+    border: none;
+}
+
+.card-body {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* align name+bio to top, not center */
+
+}
+
+.card h3 {
+    font-family: 'Satoshi';
+    font-weight: 700;
+    font-size: 35px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #0d1b3e;
+    margin-bottom: 16px;
+    line-height: 1.3;
+    vertical-align: middle;
+}
+
+.card p {
+    font-size: normal;
+    color: #666;
+    line-height: 1.65;
+    font-family: 'Satoshi';
+}
+
