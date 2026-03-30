@@ -1,0 +1,24 @@
+name: Update Publications
+
+on:
+  schedule:
+    - cron: "0 3 * * *"   # every night at 3am
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+      - run: pip install beautifulsoup4 requests
+      - run: python scripts/update_pubs.py
+      - name: Commit changes
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add publications.html
+          git commit -m "Auto-update publications" || echo "No changes"
+          git push

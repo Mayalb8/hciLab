@@ -29,7 +29,7 @@ def scrape_jacob():
         if not year:
             continue
 
-        # PDF link if present
+        # Extract PDF link if present
         pdf = None
         link = p.find("a", href=True)
         if link and link["href"].lower().endswith(".pdf"):
@@ -61,15 +61,13 @@ def load_lab_page():
 
 def find_or_create_year_section(soup, year):
     """Find the <ul> under <h4>YEAR</h4>, or create it if missing."""
-    # Look for <h4>YEAR</h4>
     h4 = soup.find("h4", string=year)
     if h4:
-        # The next <ul> after this <h4>
         ul = h4.find_next_sibling("ul")
         if ul:
             return ul
 
-    # If not found, create a new section at the top of the page
+    # If not found, create a new section at the top
     main_section = soup.find("section", id="main")
 
     new_h4 = soup.new_tag("h4")
@@ -77,7 +75,7 @@ def find_or_create_year_section(soup, year):
 
     new_ul = soup.new_tag("ul")
 
-    # Insert at the top (after the header)
+    # Insert after the header
     header = main_section.find("header")
     header.insert_after(new_ul)
     new_ul.insert_before(new_h4)
